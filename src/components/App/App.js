@@ -8,6 +8,9 @@ const App = () => {
   const [businesses, setBusinesses] = useState([]);
 
   const searchYelp = async (term, location, sortBy) => {
+    // console.log('Term: ', term);
+    // console.log('Location: ', location);
+    // console.log('Sort By: ', sortBy);
     try {
       const response = await Yelp.search(term, location, sortBy);
       setBusinesses(response);
